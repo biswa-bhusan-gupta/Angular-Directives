@@ -30,8 +30,8 @@
 </ng-template>
 
 <div
-  *ngFor="let i of log"
-  [ngClass]="{'ar':i==='Angular'}"
+  *ngFor="let i of log; let n = index"
+  [ngClass]="{'white-text':i==='Angular'}"
   [ngStyle]="{backgroundColor:i==='React'?'grey':'violet'}"
 >
   {{i}}
