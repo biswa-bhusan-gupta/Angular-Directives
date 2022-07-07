@@ -1,0 +1,35 @@
+<h3 [ngClass]="{cl:true}">Server Name</h3>
+<input
+  type="text"
+  class="form-control"
+  (input)="updateServerName($event)"
+/><br /><br />
+
+<p>{{serverName}}</p>
+
+<!-------------------- BUTTON ------------------->
+
+<button class="btn btn-primary" (click)="createServer()">
+  Add Server
+</button>
+
+<p [ngStyle]="{backgroundColor:'lightblue'}">Button : {{creationStatus}}</p>
+
+<!-------------------- DIRECTIVE ------------------->
+<p
+  [ngStyle]="{backgroundColor:'lightgreen'}"
+  *ngIf="serverCreated; else noServer"
+>
+  <!-- IF CONDITION IS TRUE , THEN ITS RENDERED -->
+  Angular Directive : Server Name is {{serverName}}
+</p>
+<ng-template #noServer>
+  <p [ngStyle]="{backgroundColor:'lightyellow'}">
+    Angular Directive : No Server is Created
+  </p>
+</ng-template>
+
+<div *ngFor="let i of log">
+  {{i}}
+  <div></div>
+</div>

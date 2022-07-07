@@ -1,2 +1,2 @@
-# Angular_Directives
+# Angular-Databinding
 Created with CodeSandbox
