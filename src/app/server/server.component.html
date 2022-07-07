@@ -29,7 +29,10 @@
   </p>
 </ng-template>
 
-<div *ngFor="let i of log">
+<div
+  *ngFor="let i of log"
+  [ngStyle]="{backgroundColor:i==='React'?'grey':'violet'}"
+>
   {{i}}
   <div></div>
 </div>
