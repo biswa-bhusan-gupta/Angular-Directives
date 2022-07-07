@@ -1,4 +1,4 @@
-<h3 [ngClass]="{cl:true}">Server Name</h3>
+<h3 [ngClass]="{'cl':true}">Server Name</h3>
 <input
   type="text"
   class="form-control"
@@ -31,6 +31,7 @@
 
 <div
   *ngFor="let i of log"
+  [ngClass]="{'ar':i==='Angular'}"
   [ngStyle]="{backgroundColor:i==='React'?'grey':'violet'}"
 >
   {{i}}
